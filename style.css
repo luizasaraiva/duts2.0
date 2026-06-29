@@ -204,20 +204,16 @@ h3 {
   box-shadow: var(--shadow);
 }
 
-.hero-photo,
-.portfolio-item {
-  min-height: 100%;
-  border-radius: 34px;
-  background:
-    linear-gradient(135deg, rgba(220,239,248,.74), rgba(247,237,225,.92)),
-    repeating-linear-gradient(45deg, transparent 0 15px, rgba(255,255,255,.3) 15px 17px);
-  border: 1px solid var(--gold-soft);
-  display: grid;
-  place-items: center;
-  color: rgba(38, 56, 77, .56);
-  font-weight: 900;
-  text-align: center;
-  padding: 22px;
+.hero-photo {
+  background-image: url("https://res.cloudinary.com/dlpa0zn7h/image/upload/v1782737399/b958899f-79c0-4b20-92e9-f39373f2dfe9_aktjfj.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fffdf9;
+}
+
+.hero-photo span {
+  display: none;
 }
 
 .badge-card {
