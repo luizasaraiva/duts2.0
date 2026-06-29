@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DutsNails Studio | Portfólio & Agendamento</title>
+  <meta name="description" content="DutsNails Studio - Nail design com atendimento personalizado, portfólio premium e agendamento online." />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="#inicio" class="brand">
+      <span class="brand-icon">D</span>
+      <span>DutsNails Studio</span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+
+    <nav class="nav" id="nav">
+      <a href="#servicos">Serviços</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#agendamento" class="nav-cta">Agendar</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Nail design • Molde F1 • Fibra • Blindagem</p>
+        <h1>Unhas elegantes, delicadas e feitas com cuidado.</h1>
+        <p>
+          Um studio pensado para quem ama beleza, acabamento impecável e uma experiência tranquila do início ao fim.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#agendamento" class="btn primary">Agendar horário</a>
+          <a href="#portfolio" class="btn ghost">Ver portfólio</a>
+        </div>
+
+        <div class="hero-stats">
+          <div><strong>2h30</strong><span>procedimentos premium</span></div>
+          <div><strong>Clean</strong><span>acabamento sofisticado</span></div>
+          <div><strong>Online</strong><span>reserva pelo site</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-photo">
+          <span>Adicione aqui sua foto principal</span>
+        </div>
+        <div class="badge-card">
+          <strong>Agenda aberta</strong>
+          <span>Escolha o serviço e reserve pelo site.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="manifest">
+      <p>
+        A DutsNails une técnica, estética e cuidado para criar unhas que combinam com você:
+        delicadas, resistentes e com acabamento de studio premium.
+      </p>
+    </section>
+
+    <section id="servicos" class="section">
+      <div class="section-title">
+        <p class="eyebrow">Tabela</p>
+        <h2>Serviços</h2>
+      </div>
+
+      <div class="services" id="servicesList"></div>
+    </section>
+
+    <section id="portfolio" class="section portfolio-wrap">
+      <div class="section-title">
+        <p class="eyebrow">Trabalhos</p>
+        <h2>Portfólio</h2>
+      </div>
+
+      <div class="portfolio">
+        <article class="portfolio-item large">Delicadas</article>
+        <article class="portfolio-item">Francesinha</article>
+        <article class="portfolio-item tall">Luxo clean</article>
+        <article class="portfolio-item">Baby boomer</article>
+        <article class="portfolio-item wide">Encapsuladas</article>
+        <article class="portfolio-item">Naturais</article>
+      </div>
+
+      <p class="portfolio-note">
+        Depois você pode substituir estes blocos pelas suas fotos reais em `assets/`.
+      </p>
+    </section>
+
+    <section id="experiencia" class="section experience">
+      <div>
+        <p class="eyebrow">Experiência</p>
+        <h2>Atendimento com calma, beleza e técnica.</h2>
+      </div>
+
+      <div class="experience-cards">
+        <article>
+          <strong>01</strong>
+          <h3>Escolha do serviço</h3>
+          <p>Você seleciona o procedimento ideal para seu momento.</p>
+        </article>
+        <article>
+          <strong>02</strong>
+          <h3>Agendamento online</h3>
+          <p>O site verifica horários e prepara sua solicitação.</p>
+        </article>
+        <article>
+          <strong>03</strong>
+          <h3>Confirmação</h3>
+          <p>Com a agenda conectada, o horário entra direto no Google Agenda.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="agendamento" class="section booking-section">
+      <div class="booking-info">
+        <p class="eyebrow">Agenda</p>
+        <h2>Agende seu horário</h2>
+        <p>
+          Escolha o serviço, data e horário. Se a integração com Google Agenda estiver ativa,
+          o evento será criado automaticamente. Caso contrário, o site envia tudo pelo WhatsApp.
+        </p>
+
+        <div class="rules-card">
+          <strong>Observações importantes</strong>
+          <ul>
+            <li>O horário considera a duração de cada serviço.</li>
+            <li>Existe um intervalo de 15 minutos entre atendimentos.</li>
+            <li>Horários pessoais bloqueados na agenda ficam indisponíveis.</li>
+          </ul>
+        </div>
+      </div>
+
+      <form id="bookingForm" class="booking-form">
+        <label>
+          Nome completo
+          <input id="clientName" type="text" placeholder="Seu nome" required />
+        </label>
+
+        <label>
+          WhatsApp
+          <input id="clientPhone" type="tel" placeholder="(11) 99999-9999" required />
+        </label>
+
+        <label>
+          Instagram
+          <input id="clientInstagram" type="text" placeholder="@seuinstagram" />
+        </label>
+
+        <label>
+          Serviço
+          <select id="serviceSelect" required></select>
+        </label>
+
+        <label>
+          Data desejada
+          <input id="dateSelect" type="date" required />
+        </label>
+
+        <div class="availability-box">
+          <div class="availability-head">
+            <strong>Horários disponíveis</strong>
+            <button type="button" id="checkAvailability" class="small-btn">Buscar horários</button>
+          </div>
+          <div id="slots" class="slots">
+            <span class="empty-state">Escolha serviço e data para buscar horários.</span>
+          </div>
+        </div>
+
+        <label>
+          Observações
+          <textarea id="notes" placeholder="Ex: quero uma unha delicada, tenho unha sensível..."></textarea>
+        </label>
+
+        <button class="btn primary full" type="submit">Confirmar agendamento</button>
+        <p id="formMessage" class="form-message"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <strong>DutsNails Studio</strong>
+    <span>Design de unhas com beleza, cuidado e sofisticação.</span>
+  </footer>
+</body>
+</html>
